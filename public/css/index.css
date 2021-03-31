@@ -1,0 +1,13 @@
+#divQR img {
+    margin: 0 auto;
+    display: block;
+    border-radius: 5px;
+}
+
+#divCard {
+    height: 660px;
+}
+
+#divPlaceholder {
+    height: 320px;
+}

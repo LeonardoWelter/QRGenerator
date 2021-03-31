@@ -1,0 +1,29 @@
+{
+  "name": "qrthingy",
+  "version": "1.0.0",
+  "description": "QRCode Generator",
+  "main": "index.js",
+  "scripts": {
+    "tailwind": "npx tailwindcss build public/css/tailwind.css -o public/css/style.css",
+    "autoprefixer": "postcss public/css/style.css -u autoprefixer --no-map -o public/css/style.css",
+    "minify": "postcss public/css/style.css -u cssnano --no-map -o public/css/style.min.css",
+    "build": "npm run tailwind && npm run autoprefixer",
+    "production": "npm run tailwind && npm run autoprefixer && npm run minify",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeonardoWelter/QRGenerator.git"
+  },
+  "keywords": [
+    "qrcode",
+    "generator",
+    "javascript"
+  ],
+  "author": "LeonardoWelter",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LeonardoWelter/QRGenerator/issues"
+  },
+  "homepage": "https://github.com/LeonardoWelter/QRGenerator#readme"
+}
