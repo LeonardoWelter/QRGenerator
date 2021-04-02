@@ -4,7 +4,11 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>QRCode Generator</title>
+    <meta name="description" content="Gerador de QR Codes sem custo">
+    <meta name="keywords" content="QRCode, Gerador, Aplicativo">
+    <meta name="author" content="Leonardo Welter">
+    <meta name="robots" content="index">
+    <title>QRCode Generator - Crie seus próprios QR Codes sem custo</title>
     <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/style.min.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/index.css'>
@@ -40,10 +44,22 @@
                         <form id="formQR" name="formQR" onsubmit="generateQRCode(event)">
                             <label for="qrData">
                                 <span class="text-gray-700 text-sm dark:text-gray-200">Dados QR Code</span>
-                                <input type="text" name="qrData" id="qrData" placeholder="Digite os dados do QR Code"
+                                <input type="text" name="qrData" id="qrData"  maxlength="78" placeholder="Digite os dados do QR Code"
                                     class="appearance-none block w-full text-gray-700 border border-gray-300 text-gray-400 dark:bg-gray-700 dark:border-gray-900 dark:text-gray-200 dark:focus:bg-gray-600 dark:focus:text-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none">
                             </label>
-                            <button type="submit" id="generateQR" class="block mx-auto text-center border border-gray-600 rounded-full py-2 px-6
+                            <!-- Remoção da função selecionar o nível de correção, devido a 
+                                 não conseguir definir o tamanho máximo em bits do QRCode                             
+                            <label id="lblError" for="qrError">
+                                <span class="text-gray-700 text-sm dark:text-gray-200">Nível de correção de erro</span>
+                                <input type="range" min="1" max="4" value="1" class="slider" id="qrError" name="qrError" oninput="updateSlider('qrError', 'valueError')">
+                                <span class="text-center text-gray-700 dark:text-gray-200" id="valueError">L</span>
+                            </label> -->
+                            <label id="lblSize" for="qrSize">
+                                <span class="text-gray-700 text-sm dark:text-gray-200">Tamanho do QR Code</span>
+                                <input type="range" min="1" max="3" value="1" class="slider" id="qrSize" name="qrSize" oninput="updateSlider('qrSize', 'valueSize')">
+                                <span class="text-center text-gray-700 dark:text-gray-200" id="valueSize">Pequeno</span>
+                            </label>
+                            <button type="submit" id="generateQR" class="block mx-auto mt-2 text-center border border-gray-600 rounded-full py-2 px-6
                                 hover:bg-gray-200 hover:border-gray-200 dark:text-gray-200 dark:hover:text-black outline-none">
                                 Gerar
                             </button>
@@ -71,6 +87,13 @@
     </div>
     <script type="text/javascript" src='js/qrcode.js'></script>
     <script src='js/index.js'></script>
+    <script>
+        // Remoção da função selecionar o nível de correção, devido a 
+        // não conseguir definir o tamanho máximo em bits do QRCode
+        //
+        //updateSlider('qrError', 'valueError');
+        updateSlider('qrSize', 'valueSize');
+    </script>
 </body>
 
 </html>
