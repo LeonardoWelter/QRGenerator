@@ -1,0 +1,1 @@
+#divQR img{margin:0 auto;display:block;border-radius:5px}#divCard{height:760px}#divPlaceholder{height:320px}#qrError,#qrSize{width:303px}#qrError,#qrSize,#valueError,#valueSize{display:block;height:23px}@media (max-width:576px){#qrError,#qrSize{width:250px}}
