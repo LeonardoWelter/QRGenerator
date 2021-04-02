@@ -10,8 +10,10 @@
     <meta name="robots" content="index">
     <title>QRCode Generator - Crie seus próprios QR Codes sem custo</title>
     <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel='stylesheet' type='text/css' media='screen' href='css/style.min.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='css/index.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/index.min.css'>
     <script>
         var date = new Date();
         const year = date.getFullYear();
@@ -44,7 +46,8 @@
                         <form id="formQR" name="formQR" onsubmit="generateQRCode(event)">
                             <label for="qrData">
                                 <span class="text-gray-700 text-sm dark:text-gray-200">Dados QR Code</span>
-                                <input type="text" name="qrData" id="qrData"  maxlength="78" placeholder="Digite os dados do QR Code"
+                                <input type="text" name="qrData" id="qrData" maxlength="78"
+                                    placeholder="Digite os dados do QR Code"
                                     class="appearance-none block w-full text-gray-700 border border-gray-300 text-gray-400 dark:bg-gray-700 dark:border-gray-900 dark:text-gray-200 dark:focus:bg-gray-600 dark:focus:text-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none">
                             </label>
                             <!-- Remoção da função selecionar o nível de correção, devido a 
@@ -56,10 +59,12 @@
                             </label> -->
                             <label id="lblSize" for="qrSize">
                                 <span class="text-gray-700 text-sm dark:text-gray-200">Tamanho do QR Code</span>
-                                <input type="range" min="1" max="3" value="1" class="slider" id="qrSize" name="qrSize" oninput="updateSlider('qrSize', 'valueSize')">
+                                <input type="range" min="1" max="3" value="1" class="slider" id="qrSize" name="qrSize"
+                                    oninput="updateSlider('qrSize', 'valueSize')">
                                 <span class="text-center text-gray-700 dark:text-gray-200" id="valueSize">Pequeno</span>
                             </label>
-                            <button type="submit" id="generateQR" class="block mx-auto mt-2 text-center border border-gray-600 rounded-full py-2 px-6
+                            <button type="submit" id="generateQR"
+                                class="block mx-auto mt-2 text-center border border-gray-600 rounded-full py-2 px-6
                                 hover:bg-gray-200 hover:border-gray-200 dark:text-gray-200 dark:hover:text-black outline-none">
                                 Gerar
                             </button>
@@ -71,7 +76,8 @@
                                 <div id="divQR"></div>
                             </div>
                             <button id="downloadQR" class="block mx-auto my-2 text-center border border-gray-600 rounded-full py-2 px-6
-                                hover:bg-gray-200 hover:border-gray-200 dark:text-gray-200 dark:hover:text-black" onclick="getQRCode()">
+                                hover:bg-gray-200 hover:border-gray-200 dark:text-gray-200 dark:hover:text-black"
+                                onclick="getQRCode()">
                                 Download
                             </button>
                         </div>
