@@ -5,9 +5,26 @@
 }
 
 #divCard {
-    height: 660px;
+    height: 760px;
 }
 
 #divPlaceholder {
     height: 320px;
+}
+
+#qrError, #qrSize {
+    display: block;
+    height: 23px;
+    width: 303px;
+}
+
+#valueError, #valueSize {
+    display: block;
+    height: 23px;
+}
+
+@media (max-width: 576px)  {
+    #qrError, #qrSize {
+        width: 250px;
+    } 
 }
