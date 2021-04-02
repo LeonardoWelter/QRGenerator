@@ -4,9 +4,9 @@
   "description": "QRCode Generator",
   "main": "index.js",
   "scripts": {
-    "tailwind": "npx tailwindcss build public/css/tailwind.css -o public/css/style.css",
-    "autoprefixer": "postcss public/css/style.css -u autoprefixer --no-map -o public/css/style.css",
-    "minify": "postcss public/css/style.css -u cssnano --no-map -o public/css/style.min.css",
+    "tailwind": "npx tailwindcss build css/tailwind.css -o css/style.css",
+    "autoprefixer": "postcss css/style.css -u autoprefixer --no-map -o css/style.css",
+    "minify": "postcss css/style.css -u cssnano --no-map -o css/style.min.css",
     "build": "npm run tailwind && npm run autoprefixer",
     "production": "npm run tailwind && npm run autoprefixer && npm run minify",
     "test": "echo \"Error: no test specified\" && exit 1"
